@@ -1,3 +1,9 @@
+libshadowdive (0.1.0-3) unstable; urgency=low
+
+  * libshadowdive.pc: add missing -lshadowdive
+
+ -- Michele Bini <michele.bini@gmail.com>  Tue, 27 Aug 2013 17:22:23 +0200
+
 libshadowdive (0.1.0-1) unstable; urgency=low
 
   * Initial release of debianized sources.

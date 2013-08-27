@@ -7,4 +7,4 @@ Name: shadowdive
 Description: Parsing and writing One Must Fall 2097 file formats.
 Version: @SHADOWDIVE_VERSION@
 Libs: -L${libdir}
-Cflags: -I${includedir}
+Cflags: -I${includedir} -lshadowdive
