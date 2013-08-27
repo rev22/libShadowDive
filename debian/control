@@ -12,7 +12,7 @@ Package: libshadowdive-dev
 Section: libdevel
 Architecture: any
 Depends: libshadowdive0 (= ${binary:Version})
-Description: Library for parsing and writing One Must Fall 2097 file formats.
+Description: Library for One Must Fall 2097 file formats (development files)
  Library for parsing and writing One Must Fall 2097 file formats.
  .
  This package header files and other development files
@@ -21,5 +21,5 @@ Package: libshadowdive0
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Library for parsing and writing One Must Fall 2097 file formats.
+Description: Library for One Must Fall 2097 file formats
  Library for parsing and writing One Must Fall 2097 file formats.
