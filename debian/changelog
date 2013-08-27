@@ -1,0 +1,5 @@
+libshadowdive (0.1.0-1) unstable; urgency=low
+
+  * Initial release of debianized sources.
+
+ -- Michele Bini <michele.bini@gmail.com>  Mon, 26 Aug 2013 22:59:48 +0200

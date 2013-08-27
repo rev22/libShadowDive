@@ -1,0 +1,25 @@
+Source: libshadowdive
+Priority: extra
+Maintainer: Michele Bini <michele.bini@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), cmake
+Standards-Version: 3.9.4
+Section: libs
+Homepage: https://github.com/omf2097/libShadowDive
+Vcs-Git: https://github.com/omf2097/libShadowDive.git
+Vcs-Browser: https://github.com/omf2097/libShadowDive
+
+Package: libshadowdive-dev
+Section: libdevel
+Architecture: any
+Depends: libshadowdive0 (= ${binary:Version})
+Description: Library for parsing and writing One Must Fall 2097 file formats.
+ Library for parsing and writing One Must Fall 2097 file formats.
+ .
+ This package header files and other development files
+
+Package: libshadowdive0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library for parsing and writing One Must Fall 2097 file formats.
+ Library for parsing and writing One Must Fall 2097 file formats.

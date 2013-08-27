@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/shadowdive
+
+Name: shadowdive
+Description: Parsing and writing One Must Fall 2097 file formats.
+Version: @SHADOWDIVE_VERSION@
+Libs: -L${libdir}
+Cflags: -I${includedir}

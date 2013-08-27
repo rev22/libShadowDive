@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
 project(ShadowDive C)
 
+set(SHADOWDIVE_MAJOR_VERSION 0)
+set(SHADOWDIVE_VERSION 0.1.0)
+
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake-scripts)
 
 set(CMAKE_C_FLAGS "-Wall -std=c99 -ggdb -pedantic")
@@ -13,7 +16,7 @@ include_directories(include/)
 enable_testing()
 add_subdirectory(testing)
 
-add_library(shadowdive
+add_library(shadowdive SHARED
     src/af.c
     src/animation.c
     src/bk.c
@@ -34,6 +37,11 @@ add_library(shadowdive
     src/internal/helpers.c
 )
 
+set_target_properties(shadowdive PROPERTIES
+  VERSION ${SHADOWDIVE_VERSION}
+  SOVERSION ${SHADOWDIVE_MAJOR_VERSION}
+  )
+
 add_executable(test_main test/test_main.c)
 add_executable(test_sounds test/sounds_main.c)
 add_executable(test_roundtrip test/roundtrip.c)
@@ -48,8 +56,14 @@ target_link_libraries(test_font shadowdive)
 target_link_libraries(test_stringparser shadowdive)
 target_link_libraries(test_language shadowdive)
 
+configure_file(libshadowdive.pc.in libshadowdive.pc @ONLY)
+install(
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/libshadowdive.pc
+  DESTINATION lib/pkgconfig
+  )
+
 FILE(GLOB H_FILES "include/shadowdive/*.h")
-INSTALL(FILES ${H_FILES} DESTINATION include/shadowdive/)
+INSTALL(FILES ${H_FILES} DESTINATION include/shadowdive)
 INSTALL(TARGETS shadowdive
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib
