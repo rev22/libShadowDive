@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: libshadowdive
+Upstream-Name: libShadowDive
 Source: https://github.com/omf2097/libShadowDive
 
 Files: *
